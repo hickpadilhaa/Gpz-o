@@ -1,0 +1,97 @@
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="view" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </head>
+   <!--javascript, formatação de data usando uma Array, nomralmente as informações são recebidas em ingles-->
+   <script>
+    alert("Utilize esse formulario para se comunicar conosco");
+    dia = new Array ("Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sabado")
+    mes = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+    data = new Date
+   </script>
+   
+<body>
+
+    <header>
+        <div class="logo_caixa">
+            <h1>
+                <img src="logo.png" class="logo"></img>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cardapio.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+
+    <ul class = "contato-titulo">
+        <li class = "contato-item">CONTATO</li>
+    </ul>
+    
+     <!--javascript-->
+    <p style ="text-align: right;margin-right: 10px;"> 
+       <script type="text/javascript">
+        alert(dia[data.getDay()]);
+       document.write (dia[data.getDay()] + ", " + data.getDate() + " de " +
+       mes[data.getMonth()]+ " de " + data.getFullYear())
+       </script>
+
+    </p>
+     <p class = "contato_texto">
+        Prencha os campos abaixo com a sua duvida de nossos produtos.
+     </p>
+    <p class = "contato_texto">
+        Nosso horario de funcionamento: Segunda à Segunda das 06hs às 24hs |
+    <a class="whatsapp-link" href="https://wa.me/5511953138408" target="_blank"><i class="fa fa-whatsapp"></i></a> (11) 95313-8408
+        
+<form name="frmContato" method="get" action="GPzao@mail.com" target="_blank">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nomesobrenome">* Nome e sobrenome</label>
+        <input type="text" id="nomesobrenome" name="" class="input-padrao" required>
+
+        <label for="email">* E-mail</label>
+        <input type="email" id="email" name="" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="" class="input-padrao" placeholder="(XX) XXXXX-XXXX">
+
+        <label for="mensagem">Observações</label>
+        <textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
+
+        <label for="contato">Como prefere o nosso contato?
+            <input type="radio" value="radio-mail" name="Contato"> E-mail
+            <input type="radio" value="radio-telefone" name="Contato"> Telefone
+            <input type="radio" value="radio-whatsapp" name="Contato"> Whatsapp
+        </label>
+
+        <br>
+        <label for="horario">Qual o motivo do seu contato?
+            <select>
+                <option>Selecione</option>
+                <option>Historico de Compra</option>
+                <option>Elogio</option>
+                <option>easter eggs</option>
+            </select>
+        </label>
+        <br>
+    </fieldset>
+
+    <label><input type="checkbox" class="chk" > Gostaria de receber nossas promoções por e-mail?</label>
+
+    <input type="submit" value="Enviar formulário" class="enviar">
+</form>
+</main>
+</body>
+</html>
